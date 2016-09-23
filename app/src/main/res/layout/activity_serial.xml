@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bystanders.moeta.ones.activity.SerialActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/serial_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/return_image" />
+
+            <TextView
+                android:id="@+id/serial_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="连载"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd">
+
+        </View>
+
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/serial_context"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/serial_author_img1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_corner_radius="100dp" />
+
+                    <TextView
+                        android:id="@+id/serial_author_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/serial_author_img1"
+                        android:layout_toRightOf="@+id/serial_author_img1"
+                        android:text="用户名"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#0088ee" />
+
+                    <TextView
+                        android:id="@+id/question_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/serial_author_name"
+                        android:layout_alignStart="@+id/serial_author_name"
+                        android:layout_below="@+id/serial_author_name"
+                        android:text="日期"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <CheckBox
+                        android:background="@mipmap/serial_list_image"
+                        android:id="@+id/essay_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="false"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        android:layout_alignBottom="@+id/question_title"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/question_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/serial_author_img1"
+                        android:layout_marginTop="20dp"
+                        android:text="标题"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_toLeftOf="@+id/essay_play"
+                        android:layout_toStartOf="@+id/essay_play" />
+
+                    <TextView
+                        android:textColor="#222222"
+                        android:lineSpacingExtra="12sp"
+                        android:id="@+id/question_answercontent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:minLines="3"
+                        android:layout_marginTop="20dp"
+                        android:text="文章内容"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_below="@+id/essay_play"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/serial_editer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="编辑信息"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_below="@+id/question_answercontent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/serial_editer"
+                        android:layout_marginTop="40dp"
+                        android:background="#999999">
+
+                    </View>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/serial_author_img2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/view2"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/ic_launcher"
+                        app:riv_corner_radius="100dp" />
+
+                    <TextView
+                        android:id="@+id/serial_author_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/serial_author_img2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/serial_author_img2"
+                        android:text="用户名"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#0088ee" />
+
+                    <TextView
+                        android:id="@+id/serial_author_indent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/serial_author_name2"
+                        android:layout_alignStart="@+id/serial_author_name2"
+                        android:layout_below="@+id/serial_author_name2"
+                        android:layout_marginTop="5dp"
+                        android:text="作者信息"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity=""
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:text="0"
+                    android:id="@+id/serial_laud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/home_btn_bg_laud"
+                    android:gravity="center"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:text="0"
+                    android:id="@+id/serial_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/comment_image"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:text="0"
+                    android:id="@+id/serial_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@mipmap/share_image" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/serial_loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tree_loading" />
+
+</RelativeLayout>

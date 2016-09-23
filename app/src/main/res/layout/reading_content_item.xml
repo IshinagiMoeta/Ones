@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="#111111"
+        android:layout_marginTop="10dp"
+        android:id="@+id/reading_content_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/reading_content_img"
+        android:layout_toStartOf="@+id/reading_content_img"
+        android:text="短篇标题"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/reading_content_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/reading_content_title"
+        android:layout_marginBottom="5dp"
+        android:text="作者"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:textColor="#222222"
+        android:id="@+id/reading_content_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reading_content_author"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/reading_content_author"
+        android:layout_below="@+id/reading_content_author"
+        android:layout_marginBottom="5dp"
+        android:lineSpacingExtra="15sp"
+        android:minLines="2"
+        android:text="短篇内容"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/reading_content_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reading_content_content"
+        android:layout_alignRight="@+id/reading_content_content"
+        android:layout_alignTop="@+id/reading_content_title"
+        android:src="@mipmap/essay_image"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#0098ff"
+        android:textSize="12sp" />
+
+</RelativeLayout>
