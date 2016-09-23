@@ -132,6 +132,7 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
         EssayContent.DataBean data = essayContent.getData();
 
         tv_username_1.setText(data.getHp_author());
+
         String date = TimeUtils.time2data_var2(data.getLast_update_date());
         tv_data.setText(date);
         tv_title.setText(data.getHp_title());
