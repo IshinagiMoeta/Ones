@@ -34,6 +34,7 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
 
     EssayContent essayContent;
     AnimationDrawable drawable;
+    AnimationDrawable discdrawable;
 
     RelativeLayout relativeLayout;
     TextView loading_img;
@@ -47,9 +48,9 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
     CheckBox cb_comment;
     CheckBox cb_share;
     CheckBox cb_play;
-    CheckBox cb_disc;
 
 
+    TextView tv_disc;
     TextView tv_username_1;
     TextView tv_username_2;
     TextView tv_data;
@@ -80,7 +81,7 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
         img_userimg_1 = (ImageView) findViewById(R.id.serial_author_img1);
         img_userimg_2 = (ImageView) findViewById(R.id.serial_author_img2);
 
-        cb_disc = (CheckBox) findViewById(R.id.essay_disc);
+        tv_disc = (TextView) findViewById(R.id.essay_disc);
         cb_good = (CheckBox) findViewById(R.id.essay_laud);
         cb_comment = (CheckBox) findViewById(R.id.essay_comment);
         cb_share = (CheckBox) findViewById(R.id.essay_share);
@@ -100,7 +101,7 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
         drawable = (AnimationDrawable) loading_img.getBackground();
         drawable.start();
         relativeLayout.setVisibility(View.GONE);
-        cb_disc.setVisibility(View.GONE);
+        tv_disc.setVisibility(View.GONE);
     }
 
     @Override
@@ -171,10 +172,13 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
                 cb_good.setText(String.valueOf(num));
                 break;
             case R.id.essay_play:
-                cb_disc.setVisibility(View.VISIBLE);
-                cb_disc.setChecked(cb_play.isChecked());
+                tv_disc.setVisibility(View.VISIBLE);
                 if (cb_play.isChecked()) {
                     cb_play.setText("暂停");
+                    tv_disc.setBackgroundResource(R.drawable.disc_play);
+                    discdrawable = (AnimationDrawable) tv_disc.getBackground();
+                    discdrawable.start();
+
                     if (noplay) {
                         play();
                         noplay = false;
@@ -182,6 +186,8 @@ public class EssayActivity extends AppCompatActivity implements View.OnClickList
                         resume();
                     }
                 } else {
+                    discdrawable.stop();
+                    tv_disc.setBackgroundResource(R.mipmap.disc_pause);
                     cb_play.setText("收听");
                     pause();
                 }

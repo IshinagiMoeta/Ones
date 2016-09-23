@@ -33,7 +33,7 @@
                 android:text="短篇"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <CheckBox
+            <TextView
                 android:id="@+id/essay_disc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,8 +43,7 @@
                 android:layout_marginEnd="14dp"
                 android:layout_marginRight="14dp"
                 android:button="@null"
-                android:clickable="false"
-                android:drawableLeft="@drawable/disc_switch" />
+                android:clickable="false" />
 
         </RelativeLayout>
 

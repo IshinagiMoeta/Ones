@@ -2,8 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
     tools:context="com.bystanders.moeta.ones.fragment.MoiveFragment">
 
+    <ListView
+        android:id="@+id/movie_list"
+        android:dividerHeight="8dp"
+        android:divider="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </ListView>
 </FrameLayout>
