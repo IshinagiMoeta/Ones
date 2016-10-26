@@ -8,5 +8,6 @@ import android.util.Log;
 public class YcUtils {
     public static void show(){
         Log.e("===","test");
+        Log.e("==","lala");
     }
 }
