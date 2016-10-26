@@ -9,5 +9,6 @@ public class YcUtils {
     public static void show(){
         Log.e("===","test");
         Log.e("==","lala");
+        int i=0;
     }
 }
