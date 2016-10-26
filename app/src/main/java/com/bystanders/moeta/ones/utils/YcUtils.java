@@ -10,5 +10,6 @@ public class YcUtils {
         Log.e("===","test");
         Log.e("==","lala");
         int i=0;
+        int j=0;
     }
 }
